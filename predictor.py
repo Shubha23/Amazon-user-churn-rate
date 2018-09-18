@@ -1,6 +1,9 @@
-# This code predicts 
 """
-@author: Shubha Mishra
+# Predicting whether a user subscribed a service/purchased a product after viewing it.
+# Two classification techniques - Random Forest Classifier and Logistic Regression are used here.
+# Several other classification algorithms could be similarly used.
+# Predictions from each algo. are stored in a single output file.
+# Metric for performance evaluation is accuracy here. Any other metric could be used though.
 """
 import numpy as np  
 from sklearn.cross_validation import train_test_split
