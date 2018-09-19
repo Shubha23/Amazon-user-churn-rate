@@ -2,8 +2,6 @@
 # Prediciting the convergence rate of a client based on past user behaviours.
 # dependent variable is in binary form (eg., 1 = converged/0 = not or true/false) and hence, its a classification problem.
 # Two classification techniques - Random Forest Classifier and Logistic Regression are used here.
-# Python's Scikit-learn package provide built-in libraries for all ML algorithms, simply import the required one,
-# train the model on training set and test its predictions on unseen test set.
 """
 import numpy as np  
 from sklearn.cross_validation import train_test_split
