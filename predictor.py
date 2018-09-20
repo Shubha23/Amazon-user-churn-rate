@@ -18,7 +18,7 @@ hdr = list(data.columns.values)          # Get list of column names
 # Create an output file to store predictions of each algorithm
 outfile = pd.DataFrame(columns=['RF','LR'])
 
-X = np.array(data[0:len(hdr)])  # All data except targets
+X = np.array(data)[:,:len(hdr)-1]  # All data except targets
 y = np.array(data[len(hdr)])    # Target classes 
 
 # Data preprocessing
