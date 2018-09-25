@@ -26,13 +26,11 @@ le = preprocessing.LabelEncoder()
 for i in range(0,len(hdr)):
      X[:,i] = le.fit_transform(X[:,i])
 
-y[:] = le.fit_transform(y[:])
-
 # Split the data as training and testing data - taking 80% train size (can be varied)
-X_train, X_test, y_train, y_test  = train_test_split(X, y, test_size = 0.2, random_state=0)
+X_train, X_test, y_train, y_test  = train_test_split(X, y, test_size = 0.2, random_state= 1)
 
 # Classification using Random Forest Classifier
-rf = RF(max_depth = 5, n_estimators = 10)
+rf = RF(n_estimators = 10, n_features = 'auto', Bootstrap = True)
 rf = rf.fit(X_train,y_train)
 prediction = rf.predict(X_test)
 print(accuracy_score(y_test, prediction))
